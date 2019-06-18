@@ -17,7 +17,10 @@ $last = count($input_array) - 1;
 
 $mismatch = 0;
 
-//Total number of item in the string
+/**
+Total number of item in the string
+**/
+
 $total_array_count = count($input_array);
 
 for($i = 0; $i < $divided_input_array_count; $i++){
@@ -44,21 +47,29 @@ if($mismatch > 0){
 
 
 
-    //split array into diferent array of 2 indexes
+    /**
+    split array into diferent array of 2 indexes
+    **/
     $input_array = str_split($braces, 2);
 
 
     $mismatch = 0;
 
 
-    //loop through the array
+    /**
+    loop through the array
+    **/
     foreach ($input_array as $array){
 
 
-        //split the array into subarray of 1
+        /** 
+        split the array into subarray of 1
+        **/
         $split_array  = str_split($array, 1);
 
-        //check if second index of the array matches flips side of the first
+        /**
+        check if second index of the array matches flips side of the first
+        **/
 
         if($split_array[0] != brother($split_array[1])){
             $mismatch++;
